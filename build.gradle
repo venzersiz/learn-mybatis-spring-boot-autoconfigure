@@ -1,0 +1,17 @@
+plugins {
+    id "java"
+    id "org.springframework.boot" version "2.7.18"
+    id "io.spring.dependency-management" version "1.1.6"
+    id "io.freefair.lombok" version "8.10.2"
+}
+
+group = "learn"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web"
+}
