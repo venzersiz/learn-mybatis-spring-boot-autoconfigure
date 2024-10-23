@@ -1,7 +1,6 @@
-package learn.shared.user.domain.repository;
+package learn.app.user.domain.repository;
 
 import learn.app.Application;
-import learn.app.user.domain.repository.AppUserMapper;
 import learn.shared.user.domain.model.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
