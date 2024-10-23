@@ -7,7 +7,7 @@ plugins {
 
 allprojects {
     group = "learn"
-    version = "1.0-SNAPSHOT"
+    version = "0.1.0"
 
     repositories {
         mavenCentral()
@@ -27,9 +27,6 @@ subprojects {
 
 project(":shared") {
     dependencies {
-        // ~ Spring Boot
-        implementation "org.springframework.boot:spring-boot-starter-test"
-
         // ~ DB
         runtimeOnly "com.h2database:h2"
 
@@ -37,8 +34,8 @@ project(":shared") {
         implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.2"
     }
 
-    bootJar.enabled = false
     jar.enabled = true
+    bootJar.enabled = false
 }
 
 project(":app") {
@@ -47,6 +44,7 @@ project(":app") {
 
         // ~ Spring Boot
         implementation "org.springframework.boot:spring-boot-starter-web"
+        implementation "org.springframework.boot:spring-boot-starter-test"
     }
 
     jar.enabled = false

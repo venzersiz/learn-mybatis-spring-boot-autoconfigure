@@ -1,4 +1,4 @@
-package learn.dao;
+package learn.app.shared.dao;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,4 +1,4 @@
-package learn.dao;
+package learn.app.shared.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
