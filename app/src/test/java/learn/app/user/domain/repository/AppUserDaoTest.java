@@ -1,20 +1,19 @@
-package learn.shared.user.domain.repository;
+package learn.app.user.domain.repository;
 
-import learn.app.Application;
 import learn.shared.user.domain.model.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(classes = Application.class)
-public class UserMapperTest {
+@SpringBootTest
+class AppUserDaoTest {
 
     @Autowired
-    UserMapper userMapper;
+    AppUserDao appUserDao;
 
     @Test
     void findById() {
-        User user = userMapper.findById(1);
+        User user = appUserDao.findById(1);
         System.out.println(user);
     }
 }
