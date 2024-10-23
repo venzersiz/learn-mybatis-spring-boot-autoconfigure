@@ -40,11 +40,14 @@ project(":shared") {
 
 project(":app") {
     dependencies {
-        implementation project(":shared")
+        implementation project(":shared") // TODO: api project(":shared") 사용 못하는 이유 알아보기
 
         // ~ Spring Boot
         implementation "org.springframework.boot:spring-boot-starter-web"
         implementation "org.springframework.boot:spring-boot-starter-test"
+
+        // ~ MyBatis
+        implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.2"
     }
 
     jar.enabled = false
