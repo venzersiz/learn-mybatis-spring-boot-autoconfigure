@@ -1,2 +1,4 @@
-rootProject.name = 'learn-mybatis-spring-boot-autoconfigure'
+rootProject.name = "learn-mybatis-spring-boot-autoconfigure"
 
+include "shared"
+include "app"

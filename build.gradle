@@ -5,25 +5,49 @@ plugins {
     id "io.freefair.lombok" version "8.10.2"
 }
 
-group = "learn"
-version = "1.0-SNAPSHOT"
+allprojects {
+    group = "learn"
+    version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
-    // ~ Spring Boot
-    implementation "org.springframework.boot:spring-boot-starter-web"
-    implementation "org.springframework.boot:spring-boot-starter-test"
+subprojects {
+    apply plugin: "java"
+    apply plugin: "org.springframework.boot"
+    apply plugin: "io.spring.dependency-management"
+    apply plugin: "io.freefair.lombok"
 
-    // ~ DB
-    runtimeOnly "com.h2database:h2"
-
-    // ~ MyBatis
-    implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.2"
+    test {
+        useJUnitPlatform()
+    }
 }
 
-test {
-    useJUnitPlatform()
+project(":shared") {
+    dependencies {
+        // ~ Spring Boot
+        implementation "org.springframework.boot:spring-boot-starter-test"
+
+        // ~ DB
+        runtimeOnly "com.h2database:h2"
+
+        // ~ MyBatis
+        implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.2"
+    }
+
+    bootJar.enabled = false
+    jar.enabled = true
+}
+
+project(":app") {
+    dependencies {
+        implementation project(":shared")
+
+        // ~ Spring Boot
+        implementation "org.springframework.boot:spring-boot-starter-web"
+    }
+
+    jar.enabled = false
 }
