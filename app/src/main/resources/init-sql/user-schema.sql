@@ -3,3 +3,5 @@ create table "User" (
   name varchar(10),
   primary key (seq)
 );
+
+
