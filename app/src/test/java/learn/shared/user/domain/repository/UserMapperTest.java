@@ -1,12 +1,12 @@
 package learn.shared.user.domain.repository;
 
-import learn.app.Application;
+import learn.app.AppApplication;
 import learn.shared.user.domain.model.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = AppApplication.class)
 public class UserMapperTest {
 
     @Autowired

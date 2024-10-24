@@ -1,13 +1,13 @@
 package learn;
 
 
-import learn.app.Application;
+import learn.app.AppApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = AppApplication.class)
 public class SpringBeansTest {
 
     @Autowired
