@@ -1,3 +1,13 @@
-mybatis:
-  mapper-locations: classpath*:/mapper/**/*.xml
-  type-aliases-package: learn.shared.**.domain.model
+spring:
+  datasource:
+    hikari:
+      user:
+        driver-class-name: org.h2.Driver
+        jdbc-url: jdbc:h2:mem:user-db
+        username: sa
+        password:
+      order:
+        driver-class-name: org.h2.Driver
+        jdbc-url: jdbc:h2:mem:order-db
+        username: sa
+        password:
