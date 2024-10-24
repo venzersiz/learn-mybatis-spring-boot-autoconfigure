@@ -40,10 +40,4 @@ public class AppMyBatisConfig {
         factoryBean.setTypeAliasesPackage("learn.shared.**.domain.model");
         return factoryBean.getObject();
     }
-
-//    @Bean
-//    public SqlSessionTemplate sqlSession(SqlSessionFactory sqlSessionFactory) {
-//
-//        return new SqlSessionTemplate(sqlSessionFactory);
-//    }
 }
